@@ -12,14 +12,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
+    },
+    "slug": {
+      "type": "uid"
     },
     "category": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::category.category",
-      "inversedBy": "sub_category"
+      "inversedBy": "sub_categories"
     }
   }
 }

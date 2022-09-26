@@ -4,21 +4,27 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "Categories"
+    "displayName": "Categories",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
-      "type": "string"
+    "name": {
+      "type": "string",
+      "required": true,
+      "default": "name"
     },
-    "sub_category": {
+    "slug": {
+      "type": "uid"
+    },
+    "sub_categories": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "oneToMany",
       "target": "api::sub-category.sub-category",
-      "inversedBy": "category"
+      "mappedBy": "category"
     }
   }
 }

@@ -12,13 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
     },
-    "Author": {
+    "author": {
       "type": "string"
     },
-    "Date": {
+    "date": {
       "type": "date"
     },
     "sub_category": {
@@ -27,14 +27,15 @@
       "target": "api::sub-category.sub-category"
     },
     "Upload": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
